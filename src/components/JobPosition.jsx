@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { Badge } from 'UI/Badge';
-import { Card } from 'UI/Card';
-import { Stack } from 'UI/Stack';
+import { Badge } from '../UI/Badge';
+import { Card } from '../UI/Card';
+import { Stack } from '../UI/Stack';
 
 function JobPosition({
-  id,
+  // id,
   company,
   logo,
   new: isNew,
@@ -64,7 +64,7 @@ function JobPosition({
 export { JobPosition };
 
 JobPosition.propTypes = {
-  id: PropTypes.number,
+  // id: PropTypes.number,
   company: PropTypes.string,
   logo: PropTypes.string,
   new: PropTypes.bool,
@@ -77,4 +77,20 @@ JobPosition.propTypes = {
   location: PropTypes.string,
   languages: PropTypes.arrayOf(PropTypes.string),
   tools: PropTypes.arrayOf(PropTypes.string),
+};
+
+JobPosition.defaultProps = {
+  // id: 0,
+  company: '',
+  logo: '',
+  new: false,
+  featured: false,
+  position: '',
+  role: '',
+  level: '',
+  postedAt: '',
+  contract: '',
+  location: '',
+  languages: [],
+  tools: [],
 };

@@ -39,5 +39,10 @@ module.exports = {
       'error',
       { allow: ['__REDUX_DEVTOOLS_EXTENSION__'] },
     ],
+    'default-param-last': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
   },
 };

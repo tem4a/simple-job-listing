@@ -1,9 +1,8 @@
-import { Badge } from 'UI/Badge';
-import { Card } from 'UI/Card';
-import { Stack } from 'UI/Stack';
+import { Stack } from '../UI/Stack';
+import { Card } from '../UI/Card';
+import { Badge } from '../UI/Badge';
 
-
-const FilterPanel = () => {
+function FilterPanel() {
   return (
     <Card className="filter-panel">
       <div className="filter-panel-wrapper">
@@ -13,10 +12,12 @@ const FilterPanel = () => {
           <Badge variant="clearable">React</Badge>
         </Stack>
 
-        <button className='link'>Clear</button>
+        <button type="button" className="link">
+          Clear
+        </button>
       </div>
     </Card>
-  )
+  );
 }
 
-export {FilterPanel};
+export { FilterPanel };
