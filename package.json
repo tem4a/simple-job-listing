@@ -1,7 +1,7 @@
 {
-  "name": "dashboard-app",
+  "name": "job-listings",
   "version": "0.1.0",
-  "author": "Mikhail Nepomniashchii",
+  "author": "flyza",
   "private": true,
   "dependencies": {
     "prop-types": "^15.8.1",
