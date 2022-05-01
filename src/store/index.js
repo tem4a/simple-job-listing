@@ -1,4 +1,5 @@
-import { applyMiddleware, createStore, compose } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { logger } from 'redux-logger';
 import { rootReducer } from './root-reducer';
 
@@ -8,12 +9,13 @@ if (process.env.NODE_ENV === 'development') {
   middleware.push(logger);
 }
 
+const composeEnhancers = composeWithDevTools({
+  // Specify name here, actionsBlacklist, actionsCreators and other options if needed
+});
+
 const store = createStore(
   rootReducer,
-  compose(
-    applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  )
+  composeEnhancers(applyMiddleware(...middleware))
 );
 
 export { store };
