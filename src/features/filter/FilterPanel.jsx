@@ -1,10 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { Stack } from '../UI/Stack';
-import { Card } from '../UI/Card';
-import { Badge } from '../UI/Badge';
+import { Stack } from '../../UI/Stack';
+import { Card } from '../../UI/Card';
+import { Badge } from '../../UI/Badge';
 
-import { selectFilter } from '../store/filter/filter.selectors';
-import { removeFilter, clearFilter } from '../store/filter/filter.actions';
+import { selectFilter, removeFilter, clearFilter } from './filter.slice';
 
 function FilterPanel() {
   const dispatch = useDispatch();
