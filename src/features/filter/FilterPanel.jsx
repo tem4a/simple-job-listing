@@ -31,7 +31,7 @@ function FilterPanel() {
         <button
           type="button"
           className="link"
-          onClick={() => dispatch(clearFilter)}
+          onClick={() => dispatch(clearFilter())}
         >
           Clear
         </button>

@@ -5,13 +5,13 @@ const filterSlice = createSlice({
   initialState: [],
   reducers: {
     addFilter: (state, action) => {
-      if (!state.includes(action.filter)) {
+      if (!state.includes(action.payload)) {
         state.push(action.payload);
       }
     },
+    removeFilter: (state, action) => state.filter((f) => f !== action.payload),
+    clearFilter: () => [],
   },
-  removeFilter: (state, action) => state.filter((f) => f !== action.payload),
-  clearFilter: () => [],
 });
 
 export const { addFilter, removeFilter, clearFilter } = filterSlice.actions;
